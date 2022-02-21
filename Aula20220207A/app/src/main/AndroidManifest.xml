@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.camelloncase.aula20220207a">
 
+    <permission
+        android:name="com.camelloncase.aula20220207a.PERMISSAO_20220207"
+        android:description="@string/descr_perm"
+        android:icon="@drawable/ic_airplanemode_active_black_24dp"
+        android:label="@string/label_perm"
+        android:protectionLevel="dangerous" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula20220207A">
+        <activity
+            android:name=".SecondActivity"
+            android:permission="com.camelloncase.aula20220207a.PERMISSAO_20220207"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.camelloncase.aula20220207a.Action20220207" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

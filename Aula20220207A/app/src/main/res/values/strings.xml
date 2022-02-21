@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Aula20220207A</string>
+    <string name="label_perm">Minha Permissao</string>
+    <string name="descr_perm">Apenas uma permissao
+   customizada de exemplo. Aqui e melhor nao utilizar
+   acentos da lingua portuguesa.</string>
+    <string name="acessar_localizacao">Acessar a Localização</string>
+    <string name="ler_cartao_sd">Ler o Cartão SD</string>
+    <string name="escrever_cartao_sd">Escrever no Cartão SD</string>
+    <string name="carregar_imagem">Carregar Imagem</string>
+    <string name="ola">Olá Mundo! Teste de Permissões</string>
+    <string name="image_description">descriçao da imagem</string>
 </resources>
