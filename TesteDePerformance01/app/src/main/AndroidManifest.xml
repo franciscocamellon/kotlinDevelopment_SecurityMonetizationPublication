@@ -2,6 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.camelloncase.testedeperformance01">
 
+    <permission
+        android:name="com.camelloncase.testedeperformance01.ACCESS_LIST_LOCATION"
+        android:description="@string/permission_description"
+        android:icon="@drawable/ic_baseline_format_list_numbered_24"
+        android:label="@string/permission_label"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +22,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TesteDePerformance01">
+        <activity
+            android:name=".LocationListActivity"
+            android:permission="com.camelloncase.testedeperformance01.ACCESS_LIST_LOCATION"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.camelloncase.testedeperformance01.ActionLocation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
