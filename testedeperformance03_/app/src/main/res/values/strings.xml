@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Teste de Performance 03</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_recipe_button">Add new survey button</string>
+    <string name="enter_business_name">Enter business name</string>
+    <string name="enter_neighborhood_name">Enter neighborhood name</string>
+    <string name="save_business">Save business</string>
+    <string name="delete_icon">Delete icon</string>
+    <string name="new_recipe_add_button">New survey add button</string>
+    <string name="btn_title_update">Update survey</string>
+    <string name="btn_title_save">Save survey</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="save_on_file">Save on file</string>
+    <string name="first_question">Este estabelecimento tem um POP definido por um nutricionista?</string>
+    <string name="second_question">Este estabelecimento implementou os POP\'s em vigor?</string>
+    <string name="third_question">Este estabelecimento treina seu funcionários com relação às boas práticas?</string>
+    <string name="fourth_question">Este estabelecimento verifica a higiene pessoal dos manipuladores?</string>
+    <string name="fifth_question">Este estabelecimento verifica semanalmente a validade dos produtos fabricados?</string>
+    <string name="sixth_question">Este estabelecimento faz controle de pragas semestralmente?</string>
+</resources>
