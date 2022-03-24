@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.camelloncase.testedeperformance03">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,9 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TesteDePerformance03">
         <activity
+            android:name=".ui.management.SurveyManagementActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ui.surveys.SurveysActivity"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
