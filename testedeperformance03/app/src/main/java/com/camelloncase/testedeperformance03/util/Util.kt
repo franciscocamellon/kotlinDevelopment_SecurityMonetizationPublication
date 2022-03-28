@@ -1,9 +1,11 @@
 package com.camelloncase.testedeperformance03.util
 
 import android.content.Context
+import android.util.Patterns
 import android.widget.Toast
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Pattern
 
 fun formattedCurrentDate(pattern: String): String {
 
@@ -13,8 +15,27 @@ fun formattedCurrentDate(pattern: String): String {
     return formatter.format(date)
 }
 
-fun showMessageToUser(context: Context, message: String) {
+fun showMessageToUser(context: Context?, message: String) {
 
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
+}
+
+fun checkPasswordPattern(password: String): Boolean {
+
+    val regex = "^(?=.*[-@!#\$%^&+=]).{6,}\$"
+    val passwordPattern = Pattern.compile(regex)
+
+    return when (password.isEmpty()) {
+        true -> false
+        else -> passwordPattern.matcher(password).matches()
+    }
+}
+
+fun checkEmailPattern(email: String): Boolean {
+
+    return when (email.isEmpty()) {
+        true -> false
+        else -> Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
 }

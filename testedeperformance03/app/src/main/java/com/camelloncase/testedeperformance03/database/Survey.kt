@@ -8,10 +8,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "health_surveillance_inspection_table")
 data class Survey (
 
-    @PrimaryKey(autoGenerate = true) var surveyId: Int = 0,
-
-    @ColumnInfo(name = "surveyor_id")
-    val surveyorId: String,
+//    @ColumnInfo(name = "surveyor_id")
+//    val surveyorId: String,
 
     @ColumnInfo(name = "business_name")
     val businessName: String,
@@ -40,20 +38,21 @@ data class Survey (
     @ColumnInfo(name = "create_date")
     val createDate: String,
 
-    @Embedded var surveyor: Surveyor? = null
+    @Embedded var surveyor: Surveyor,
 
-)
+) {
+    @PrimaryKey(autoGenerate = true) var surveyId: Int = 0
+}
 
+@Entity(tableName = "user_table")
 data class Surveyor (
 
-    @PrimaryKey(autoGenerate = true) var surveyorId: Int = 0,
+    @PrimaryKey
+    var surveyorId: String,
 
     @ColumnInfo(name = "surveyor_name")
     val surveyorName: String,
 
     @ColumnInfo(name = "surveyor_email")
-    val surveyorEmail: String,
-
-    @ColumnInfo(name = "surveyor_user_name")
-    val surveyorUserName: String,
-)
+    val surveyorEmail: String
+) { }

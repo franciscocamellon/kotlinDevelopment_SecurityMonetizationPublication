@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/drawable/ic_back.xml" value="0.1615" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1625" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1625" />
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.179" />
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/drawable/ic_email.xml" value="0.179" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/activity_survey.xml" value="0.25025641025641027" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/activity_survey_management.xml" value="0.25025641025641027" />
         <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/activity_surveys.xml" value="0.15520833333333334" />
-        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/survey_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/fragment_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/_Code/infnet/1_Materias_em_curso/DESENVOLVIMENTO_ANDROID/kotlinDevelopment_SecurityMonetizationPublication/testedeperformance03/app/src/main/res/layout/survey_item.xml" value="0.33" />
       </map>
     </option>
   </component>

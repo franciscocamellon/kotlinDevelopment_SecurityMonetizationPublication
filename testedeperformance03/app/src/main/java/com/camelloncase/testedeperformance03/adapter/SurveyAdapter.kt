@@ -22,6 +22,7 @@ class SurveyAdapter(
         val business: TextView = itemView.findViewById(R.id.businessTextView)
         val neighborhood: TextView = itemView.findViewById(R.id.neighborhoodTextView)
         val createDate: TextView = itemView.findViewById(R.id.createDateTextView)
+        val surveyorName: TextView = itemView.findViewById(R.id.userNameTextView)
         val deleteSurvey: ImageView = itemView.findViewById(R.id.deleteImageView)
     }
 
@@ -38,6 +39,7 @@ class SurveyAdapter(
 
         holder.business.text = allSurveys[position].businessName
         holder.neighborhood.text = allSurveys[position].neighborhoodName
+        holder.surveyorName.text = allSurveys[position].surveyor.surveyorName
 
         val formattedRecipeDate = "Created: ${allSurveys[position].createDate}"
         holder.createDate.text = formattedRecipeDate

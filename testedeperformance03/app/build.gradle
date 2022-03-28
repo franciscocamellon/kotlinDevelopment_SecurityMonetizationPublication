@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -31,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -42,10 +46,20 @@ dependencies {
 
     implementation "androidx.activity:activity-ktx:1.4.0"
 
+    // Import the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-database-ktx'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+
     // Room components
     implementation "androidx.room:room-ktx:2.4.2"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     kapt "androidx.room:room-compiler:2.4.2"
 
     // Lifecycle components

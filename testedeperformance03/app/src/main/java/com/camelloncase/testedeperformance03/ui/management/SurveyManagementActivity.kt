@@ -13,6 +13,9 @@ import com.camelloncase.testedeperformance03.ui.surveys.SurveysActivity
 import com.camelloncase.testedeperformance03.util.formattedCurrentDate
 import com.camelloncase.testedeperformance03.util.showMessageToUser
 import com.camelloncase.testedeperformance03.viewmodel.SurveyViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SurveyManagementActivity : AppCompatActivity() {
 
@@ -29,6 +32,7 @@ class SurveyManagementActivity : AppCompatActivity() {
     private lateinit var cancelButton: Button
     private lateinit var viewModelFactory: ViewModelProvider.AndroidViewModelFactory
     private lateinit var viewModel: SurveyViewModel
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,8 @@ class SurveyManagementActivity : AppCompatActivity() {
 
         viewModelFactory = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         viewModel = ViewModelProvider(this, viewModelFactory)[SurveyViewModel::class.java]
+
+        auth = Firebase.auth
 
         initWidgetComponents()
 
@@ -64,11 +70,20 @@ class SurveyManagementActivity : AppCompatActivity() {
                     val fifth = fifthEdt.text.toString()
                     val sixth = sixthEdt.text.toString()
 
-                    val survey = Survey("1", business, neighborhood, first, second, third, fourth, fifth, sixth, createDate)
+                    val surveyorId = auth.currentUser?.uid.toString()
+                    val surveyor = viewModel.getSurveyorById(surveyorId)
 
-                    viewModel.addSurvey(survey)
+                    val survey = surveyor?.let { it1 ->
+                        Survey( business, neighborhood, first, second, third, fourth, fifth, sixth, createDate,
+                            it1
+                        )
+                    }
 
-                    showMessageToUser(this, "$business successful added!")
+                    if (survey != null) {
+                        viewModel.addSurvey(survey)
+                    }
+
+                    showMessageToUser(this, "$surveyorId successful added!")
 
                     goToMainActivity()
                 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.camelloncase.testedeperformance09.ui.auth.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_recover"
+            app:destination="@id/navigation_recover" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.camelloncase.testedeperformance09.ui.auth.RegisterFragment"
+        android:label="@string/title_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_recover"
+        android:name="com.camelloncase.testedeperformance09.ui.auth.RecoverFragment"
+        android:label="@string/title_recover"
+        tools:layout="@layout/fragment_recover" >
+        <action
+            android:id="@+id/action_navigation_recover_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.camelloncase.testedeperformance09.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.camelloncase.testedeperformance09.ui.calendar.CalendarFragment"
+        android:label="Calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.camelloncase.testedeperformance09.ui.map.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.camelloncase.testedeperformance09.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
